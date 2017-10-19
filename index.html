@@ -1,23 +1,17 @@
-﻿<canvas id=c>
-<script>
-ctx = c.getContext`2d`;
-a = new Audio("song.mp3");
-a.autoplay = a.loop = true;
+﻿<canvas id=c><script>
+x=c.getContext`2d`;
+a=new Audio("song.mp3");
+a.autoplay=a.loop=!0;
 with(new AudioContext)
 with(createMediaElementSource(a))
- connect(destination),
- A = createAnalyser(),
- A.fftSize = 256,
- connect(A);
-setInterval(
-z => {
- c.width ^= 0
- D = new Uint8Array(A.frequencyBinCount);
- A.getByteFrequencyData(D);
- m = 1;
- for(i = 0; i < D.length; i++)
-   ctx.lineTo(i*4, 150 - D[i]/50 * m),
-   m++;
- ctx.stroke();
-}, 9)
+connect(destination),
+A=createAnalyser(),
+connect(A);
+setInterval(z=>{
+c.width^=0;
+A.getByteFrequencyData(D=new Uint8Array(A.frequencyBinCount));
+m=1;
+for(i=0;i<300;i++)x.lineTo(i,150-D[i]/150*m++);
+x.stroke();
+},9)
 </script>
