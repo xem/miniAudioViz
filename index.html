@@ -1,0 +1,17 @@
+﻿<canvas id=c><script>
+x=c.getContext`2d`;
+a=new Audio("song.mp3");
+a.autoplay=a.loop=!0;
+with(new AudioContext)
+with(createMediaElementSource(a))
+connect(destination),
+A=createAnalyser(),
+connect(A);
+setInterval(z=>{
+c.width^=0;
+A.getByteFrequencyData(D=new Uint8Array(A.frequencyBinCount));
+m=1;
+D.map((y,i)=>x.lineTo(i,150-D[i]/150*m++));
+x.stroke();
+},9)
+</script>
