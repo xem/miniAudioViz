@@ -8,10 +8,6 @@ connect(destination),
 A=createAnalyser(),
 connect(A);
 setInterval(z=>{
-c.width^=0;
-A.getByteFrequencyData(D=new Uint8Array(A.frequencyBinCount));
-m=1;
-for(i=0;i<300;i++)x.lineTo(i,150-D[i]/150*m++);
-x.stroke();
+for(A.getByteFrequencyData(D=new Uint8Array(i=c.width=512));i--;)x.lineTo(i,150-D[i]);x.stroke()
 },9)
 </script>
