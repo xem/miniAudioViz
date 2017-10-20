@@ -1,13 +1,1 @@
-﻿<canvas id=c><script>
-x=c.getContext`2d`;
-a=new Audio("song.mp3");
-a.autoplay=a.loop=!0;
-with(new AudioContext)
-with(createMediaElementSource(a))
-connect(destination),
-A=createAnalyser(),
-connect(A);
-setInterval(z=>{
-for(A.getByteFrequencyData(D=new Uint8Array(i=c.width=512));i--;)x.lineTo(i,150-D[i]);x.stroke()
-},9)
-</script>
+﻿<canvas id=c><svg onload="a=new Audio(3);with(new AudioContext)with(createMediaElementSource(a))connect(destination),connect(A=createAnalyser());setInterval('A.getByteFrequencyData(D=new Uint8Array(c.width=512));D.map((v,i)=>c.getContext`2d`.fillRect(i,150,1,-v*.58))',a.autoplay=a.loop=9)">
